@@ -2,12 +2,12 @@
 ​
 - Install node_modules via ```yarn install```
 ​
--  ### Android
+-  ### Android TV
         - Create local.properties file and your android SDK path to it
         - Open your Android TV simulator like Android TV (1080p)
         - Build & Run via `npm run android` or `react-native run-android`
 ​
-- ### IOS
+- ### Apple tvOs
        - Install pods via `cd ios && pod install && cd ..`
        - Build & Run via `npx react-native run-ios  --simulator "Apple TV" --scheme "DummyTVApp-tvOS"`
 
