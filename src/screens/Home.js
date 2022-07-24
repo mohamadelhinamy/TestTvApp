@@ -7,6 +7,7 @@ import {
 import {images} from '../../assets/images';
 import MoviePoster from '../components/MoviePoster';
 import {movieStore} from '../mobx-state';
+import {colors} from '../styles/colors';
 
 const Home = () => {
   return (
@@ -27,7 +28,7 @@ const Home = () => {
 const MainContainer = styled.View`
   width: ${wp(100)}px;
   height: ${hp(100)}px;
-  background-color: black;
+  background-color: ${colors.black};
 `;
 
 const BoxesContainer = styled.View`
