@@ -6,13 +6,19 @@ import {
 } from 'react-native-responsive-screen';
 import {images} from '../../assets/images';
 import MoviePoster from '../components/MoviePoster';
+import {movieStore} from '../mobx-state';
 
 const Home = () => {
   return (
     <MainContainer>
       <BoxesContainer>
-        <MoviePoster image={images.modernFamily} title="Modern Family" />
-        <MoviePoster image={images.strangerThings} title="Stranger Things" />
+        {movieStore.movies.map((movie, index) => (
+          <MoviePoster
+            title={movie.title}
+            image={images[movie.poster]}
+            key={movie.index}
+          />
+        ))}
       </BoxesContainer>
     </MainContainer>
   );
